@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 _DIGEST_SYSTEM = """\
 You are an expert at writing ultra-concise executive intelligence briefs.
 Your sole job: compress competitive intelligence findings into a ≤100-word \
-bullet-point briefing for a Guidewire (GWRE) investor/executive.
+bullet-point briefing for a Veeva (VEEV) investor/executive.
 
 STRICT RULES — violating any rule makes the brief unusable:
 1. Maximum 100 words TOTAL. Count every word. Hard limit.
@@ -104,7 +104,7 @@ def _to_html(subject: str, plain_bullets: str) -> str:
 <head><meta charset="utf-8"></head>
 <body style="font-family:Arial,Helvetica,sans-serif;max-width:600px;margin:0 auto;padding:24px;color:#1a1a2e;">
   <h2 style="font-size:18px;border-bottom:2px solid #003087;padding-bottom:8px;margin-bottom:16px;">
-    GWRE Intel Brief &mdash; {today_str}
+    VEEV Intel Brief &mdash; {today_str}
   </h2>
   <ul style="padding-left:20px;line-height:1.7;font-size:14px;">
     {items_html}
@@ -155,7 +155,7 @@ def send_digest(findings: list[dict], digest_text: str | None = None) -> None:
     so the agent still works out of the box during development.
     """
     today_str = datetime.now().strftime("%B %d, %Y")
-    subject = f"GWRE Intel Brief – {today_str}"
+    subject = f"VEEV Intel Brief – {today_str}"
 
     plain_body = digest_text if digest_text is not None else generate_digest(findings)
     html_body  = _to_html(subject, plain_body)

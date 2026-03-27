@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GWRE Research Agent — entry point.
+VEEV Research Agent — entry point.
 
 Scans VC firm activity and the broader insurtech market for competitive
 developments relevant to Guidewire (GWRE), then sends a ≤100-word daily
@@ -55,7 +55,7 @@ def run_daily_job() -> None:
     """Full pipeline: research → dedup → digest → email."""
     start = datetime.now()
     logger.info("=" * 60)
-    logger.info("GWRE Research Agent — daily job started %s", start.strftime("%Y-%m-%d %H:%M:%S"))
+    logger.info("VEEV Research Agent — daily job started %s", start.strftime("%Y-%m-%d %H:%M:%S"))
     logger.info("=" * 60)
 
     try:

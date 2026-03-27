@@ -32,7 +32,7 @@ LOOKBACK_DAYS: int = int(os.getenv("LOOKBACK_DAYS", "7"))
 # ── Airtable (optional — for searchable database of daily briefs) ──────────────
 AIRTABLE_API_KEY:   str = os.getenv("AIRTABLE_API_KEY", "")
 AIRTABLE_BASE_ID:   str = os.getenv("AIRTABLE_BASE_ID", "")
-AIRTABLE_TABLE_NAME: str = os.getenv("AIRTABLE_TABLE_NAME", "GWRE Daily Briefs")
+AIRTABLE_TABLE_NAME: str = os.getenv("AIRTABLE_TABLE_NAME", "VEEV Daily Briefs")
 
 # ── Validation ────────────────────────────────────────────────────────────────
 def validate() -> None:
