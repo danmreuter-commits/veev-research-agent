@@ -52,7 +52,7 @@ def _run_block(client, block):
     accumulated = ""
     continuations = 0
     while continuations <= 3:
-        response = client.messages.create(model="claude-sonnet-4-6", max_tokens=3000, system=_SEARCH_SYSTEM, tools=[{"type": "web_search_20260209", "name": "web_search"}], messages=messages)
+        response = client.messages.create(model="claude-sonnet-4-6", max_tokens=1500, system=_SEARCH_SYSTEM, tools=[{"type": "web_search_20260209", "name": "web_search"}], messages=messages)
         for cb in response.content:
             if hasattr(cb, "text"):
                 accumulated += cb.text + "\n"
