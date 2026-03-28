@@ -51,7 +51,7 @@ def _run_block(client, block):
     messages = [{"role": "user", "content": user_prompt}]
     accumulated = ""
     continuations = 0
-    while continuations <= 3:
+    while continuations <= 1:
         response = client.messages.create(model="claude-sonnet-4-6", max_tokens=1500, system=_SEARCH_SYSTEM, tools=[{"type": "web_search_20260209", "name": "web_search"}], messages=messages)
         for cb in response.content:
             if hasattr(cb, "text"):
